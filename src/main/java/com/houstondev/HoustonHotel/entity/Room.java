@@ -29,6 +29,7 @@ public class Room {
     @Column(name = "@roomDescription")
     private String roomDescription;
 
+    @OneToMany(mappedBy = "room", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @Column(name = "@bookings")
     private List<Booking> bookings = new ArrayList<>();
 

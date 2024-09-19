@@ -30,7 +30,7 @@ public class User implements UserDetails {
     private String name;
 
     @NotBlank(message = "Phone number is required")
-    @Column(name = "phone_number")
+    @Column(name = "phoneNumber")
     private String phoneNumber;
 
     @NotBlank(message = "Password is required")

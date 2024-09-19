@@ -19,24 +19,24 @@ public class Booking {
     private Long id;
 
     @NotNull(message = "check in date is required")
-    @Column(name = "check_in_date")
+    @Column(name = "checkInDate")
     private LocalDate checkInDate;
 
     @Future(message = "check out date must be in the future")
-    @Column(name = "check_out_date")
+    @Column(name = "checkOutDate")
     private LocalDate checkOutDate;
 
     @Min(value = 1, message = "Number of adults must not be less then 1")
-    @Column(name = "num_of_adults")
+    @Column(name = "numOfAdults")
     private int numOfAdults;
 
     @Min(value = 0, message = "Number of children must not be less then 0")
-    @Column(name = "num_of_children")
+    @Column(name = "numOfChildren")
     private int numOfChildren;
 
     private int totalNumOfGuests;
 
-    @Column(name = "booking_confirmation_code")
+    @Column(name = "bookingConfirmationCode")
     private String bookingConfirmationCode;
 
     @ManyToOne(fetch = FetchType.EAGER)

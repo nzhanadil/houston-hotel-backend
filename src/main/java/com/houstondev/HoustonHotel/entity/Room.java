@@ -17,16 +17,16 @@ public class Room {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "@room_type")
+    @Column(name = "@roomType")
     private String roomType;
 
-    @Column(name = "@room_price")
+    @Column(name = "@roomPrice")
     private BigDecimal roomPrice;
 
-    @Column(name = "@room_photo_url")
+    @Column(name = "@roomPhotoUrl")
     private String roomPhotoUrl;
 
-    @Column(name = "@room_description")
+    @Column(name = "@roomDescription")
     private String roomDescription;
 
     @Column(name = "@bookings")

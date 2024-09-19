@@ -33,12 +33,14 @@ public class User implements UserDetails {
     @Column(name = "phone_number")
     private String phoneNumber;
 
+    @NotBlank(message = "Password is required")
     @Column(name = "password")
     private String password;
 
     @Column(name = "role")
     private String role;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @Column(name = "bookings")
     private List<Booking> bookings = new ArrayList<>();
 
